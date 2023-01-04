@@ -1,0 +1,35 @@
+<div class="row py-2 bg-light text-dark">
+    <div class="col-md-2 text-end cursor">
+       <span class="me-2 fs-4 mt-5" routerLink="/medicines"><i class="bi bi-arrow-left"></i></span> Top Deals
+    </div>
+   </div>
+   <div class="row py-3 bg-info text-light mb-2">
+     <div class="col-md-4 text-end">
+       Showing Medicine Availability and Price in
+     </div>
+   </div>
+   
+   <div class="container py-5 mt-4">
+     <div class="row">
+      <div class="col-md-5 mt-4 m-auto text-center">
+       <img [src]="productDetails?.productImageSlug[0]" alt=""  width="320">
+      </div>
+      <div class="col-md-5 mt-4 mx-2">
+         <p class="title">HIMALAYA NEEM & TURMERIC SOAP 125GM</p>
+         <p class="mt-2 py-2 ms-4"><span class="fs-6 text-muted text-decoration-line-through">MRP &nbsp; ₹ {{productDetails?.actualPrice}} /*</span> <span class="ms-5 fs-4 fw-bolder">₹ {{productDetails?.discountPrice}} /-*</span> </p>
+         
+         <div class="row">
+           <div class="col-md-12 text-muted">Manufacturer Name - Reckitt Benckiser</div>
+           <div class="col-md-12 text-muted">Manufacturer Address - Reckitt Benckiser India Pvt. Ltd. DLF Cyber Park, 6th & 7th Floor (Tower C), 405 B, Udyog Vihar Phase 3, Sector 20, Gurugram, India, Pin Code: 122016</div>
+           <div class="col-md-12 text-muted">Country Of Origin - India</div>  
+           <div class="col-md-12 text-muted">Expires On or After - Aug 2025</div>
+       </div>
+       <div class="row mt-3 text-start">
+           <div class="col">
+               <button type="button" class="btn btn-primary me-2">Add To Cart</button>
+               <button type="button" class="btn btn-outline-primary">Continue Shooping</button>
+           </div>
+       </div>
+       </div>
+     </div>
+   </div>
