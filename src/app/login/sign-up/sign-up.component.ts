@@ -15,6 +15,7 @@ isVerifyOtp:boolean=false;
 signUpForm!:FormGroup;
 otpGenerated!:number;
 otpTimer!:number;
+isSignUpSuccess:boolean=false;
 
 sub!:Subscription;
   constructor(private fb:FormBuilder , private http:HttpService) { }
@@ -62,8 +63,11 @@ sub!:Subscription;
     if(this.isVerifyOtp){
     console.log(this.signUpForm.value);
     this.http.postDetailsToServer('users',this.signUpForm.value).subscribe((response:any)=>{
-      if(response && response.length > 0){
+      if(response ){
+        this.isSignUpSuccess = true;
         console.log(response);
+      }else{
+        this.isSignUpSuccess = false;
       }
     })
     }

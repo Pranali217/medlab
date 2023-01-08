@@ -2,6 +2,9 @@
     <div class="alert alert-danger" role="alert" *ngIf="!isVerifyOtp && signUpForm.valid">
       Mobile verification is mandatory
       </div>
+      <div class="alert alert-success" role="alert" *ngIf="isSignUpSuccess">
+    Register Successfully Please Proceed with the login
+      </div>
     <div class="row">
         <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
             <div class="mb-3">
@@ -33,7 +36,11 @@
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
-            <button type="submit" class="btn btn-primary" [disabled]="!signUpForm.valid || !isVerifyOtp">Submit</button>
+            <div class="d-grid gap-2 ">
+              <button class="btn btn-primary" type="submit" [disabled]="!(signUpForm.valid && !isVerifyOtp && isSignUpSuccess )">Sign Up</button>
+              <!-- <button class="btn btn-primary" type="button">Button</button> -->
+            </div>
+          
           </form>
 
     </div>

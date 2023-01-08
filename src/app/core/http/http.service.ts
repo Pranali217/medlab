@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpService {
+  emitSelProduct() {
+    throw new Error('Method not implemented.');
+  }
 
   baseUrl:string=" http://localhost:3000/";
 

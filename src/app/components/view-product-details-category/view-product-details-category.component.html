@@ -12,13 +12,13 @@
 
         </div>
         <div class="col-md-2 mx-5 my-3" *ngFor="let deal of category.top_deals ">
-            <div class="card card-block cursor" style="width: 280px;" [routerLink]="['/view-product-details',deal.drugCode]">
-                <img [src]="deal.productImageSlug[0]" class="card-img-top m-2 p-4" [alt]="deal.alt" [title]="deal.title" class="card-img-top" height="220" alt="...">
+            <div class="card card-block cursor" style="width: 280px;" >
+                <img [src]="deal.productImageSlug[0]" [routerLink]="['/view-product-details',deal.drugCode]" class="card-img-top m-2 p-4" [alt]="deal.alt" [title]="deal.title" class="card-img-top" height="220" alt="...">
                 <div class="card-body">
                   <h5 class="card-title card-discription" [title]="deal.description">{{deal.description}}</h5>
                   <p class="card-text text-muted">{{deal.type}}</p>
                   <span class="card-text text-muted">MRP</span>
-                <P style="font-size: 20px;">₹<span class="ms-0">{{deal.discountPrice}}</span>&nbsp; <span style="margin-left: 90px;" class="border border-primary rounded"><a class="text-decoration-none px-3 fs-6">ADD</a></span></P>
+                <P style="font-size: 20px;">₹<span class="ms-0">{{deal.discountPrice}}</span>&nbsp; <span style="margin-left: 90px;" class="border border-primary rounded"><a class="text-decoration-none px-3 fs-6" (click)="addToCart(deal)">ADD</a></span></P>
                 </div>
               </div>
             
