@@ -17,6 +17,7 @@ import { ViewProductDetailsComponent } from './components/view-product-details/v
 import { ViewProductDetailsCategoryComponent } from './components/view-product-details-category/view-product-details-category.component';
 import { LoginModule } from './login/login.module';
 import { CartModule } from './cart/cart.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { CartModule } from './cart/cart.module';
     FormsModule,
     HttpClientModule,
     LoginModule,
-    CartModule
+    CartModule,
+    NgbModule
 
   ],
   providers: [],

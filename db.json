@@ -1024,12 +1024,55 @@
     }
   ],
   "users": [
-    
     {
       "userName": "pranali",
       "mobileNo": "7676767676",
       "password": "welcome123",
       "isMobileNoVerified": true,
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "orderId": 166896,
+      "fullName": "prana",
+      "totalAmount": 184,
+      "totalDiscount": 20,
+      "mobileNo": "8686868686",
+      "emailId": "test123@gmail.com",
+      "finalAmount": 164,
+      "gender": true,
+      "deliveryType": "Online",
+      "oAddress": {
+        "line1": "201",
+        "line2": "area",
+        "landmark": "land",
+        "pincode": "411041",
+        "city": "pune",
+        "state": "Maharashtra"
+      },
+      "products": [
+        {
+          "description": "BE FRESH BABY DIAPER M - 5'S",
+          "actualPrice": 95,
+          "brand": "BE FRESH",
+          "drugCode": "1000054509",
+          "discountPrice": 71,
+          "quantity": 2,
+          "totalAmount": 142,
+          "type": "Packet"
+        },
+        {
+          "description": "Dettol Liquid Handwash Refill - Skincare Moisturizing Hand Wash, 175ml",
+          "actualPrice": 42,
+          "brand": "RECKITT BENCKISER",
+          "drugCode": "1000050071",
+          "discountPrice": 42,
+          "quantity": 1,
+          "totalAmount": 42,
+          "type": "PACKET"
+        }
+      ],
       "id": 1
     }
   ]

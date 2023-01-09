@@ -5,9 +5,7 @@ import { SharedService } from '../shared/services/shared.service';
   providedIn: 'root'
 })
 export class CartService {
-
-  
-
+  orderObj: any;
   constructor(private shared:SharedService) { }
 
   addSelectItemToCart(product:any){
@@ -22,5 +20,17 @@ export class CartService {
     console.log('string',JSON.stringify(products));
     localStorage.setItem("products",JSON.stringify(products));
     this.shared.emitSelProduct.next(products.length);
+  }
+
+  setOrder(order:any){
+    this.orderObj = order;
+  }
+
+  getOrder(){
+    return this.orderObj ;
+  }
+
+  removeProductsFromLocalStorage(){
+    localStorage.removeItem('products');
   }
 }

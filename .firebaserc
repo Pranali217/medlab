@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "medlab-life"
+  },
+  "targets": {
+    "medlab-life": {
+      "hosting": {
+        "medlab": [
+          "medlab-life"
+        ]
+      }
+    }
+  }
+}
