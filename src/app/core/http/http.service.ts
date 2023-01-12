@@ -8,8 +8,8 @@ export class HttpService {
   emitSelProduct() {
     throw new Error('Method not implemented.');
   }
-
-  baseUrl:string=" http://localhost:3000/";
+  baseUrl:string="https://gabby-nervous-pepper.glitch.me";
+  // baseUrl:string=" http://localhost:3000/";
 
   httpHeaders:HttpHeaders = new HttpHeaders()
                             .set('content-type','application/json');
